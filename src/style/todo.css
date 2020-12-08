@@ -1,0 +1,134 @@
+:root {
+  --primary-color: #222;
+  --secondary-color: #f8f9fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  background-color: var(--secondary-color);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+header > h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.main {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  color: var(--secondary-color);
+  display: flex;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 2rem 3rem;
+}
+
+form input,
+form textarea,
+form button,
+form select {
+  margin: 0.5rem 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+section.items {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+article.post-it {
+  width: 20rem;
+}
+
+.post-it {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  margin: 2rem 1rem;
+  background: #ffd707;
+  position: relative;
+  min-height: 200px;
+  cursor: pointer;
+}
+
+.post-it.completed {
+  opacity: 0.5;
+}
+
+.post-it:after {
+  content: "";
+  position: absolute;
+  bottom: -2em;
+  left: 0;
+  right: 2em;
+  border-width: 1em;
+  border-style: solid;
+  border-color: #ffd707;
+}
+
+.post-it:before {
+  content: "";
+  position: absolute;
+  bottom: -2em;
+  right: 0;
+  border-width: 2em 2em 0 0;
+  border-style: solid;
+  border-color: #d3b100 transparent;
+}
+
+.post-it p {
+  font-size: 1rem;
+}
+
+.post-it p.post-it-title {
+  font-weight: 600;
+}
+
+.post-it button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.post-it.green {
+  background: #05ed18;
+}
+.post-it.green:after {
+  border-color: #05ed18;
+}
+.post-it.green:before {
+  border-color: #02b010 transparent;
+}
+
+.post-it.red {
+  background: #f55656;
+}
+.post-it.red:after {
+  border-color: #f55656;
+}
+.post-it.red:before {
+  border-color: #a62929 transparent;
+}
